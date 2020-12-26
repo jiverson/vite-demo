@@ -2,7 +2,7 @@ import {
   from as fromRxjs,
   fromEvent as fromEventRx,
   Observable,
-  ObservableInput
+  ObservableInput,
 } from "rxjs";
 import { filter, mergeMap } from "rxjs/operators";
 import { isRef, Ref, watch } from "vue";
@@ -15,8 +15,6 @@ export function from<T>(value: ObservableInput<T> | Ref<T>): Observable<T> {
   }
   return fromRxjs(value);
 }
-
-
 
 export function fromEvent<T extends HTMLElement>(
   value: Ref<T>,

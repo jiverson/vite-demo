@@ -1,18 +1,26 @@
 import { computed, ref } from "vue";
 
-export function fetchProduct(params: any): Promise<Array<any>> {
+let counter = 0;
+
+export interface Product {
+  name: string;
+  id: string | number;
+}
+
+export function fetchProduct(id: string | number): Promise<Array<Product>> {
+  counter++;
   return new Promise((resolve, reject) => {
-    setTimeout(() => resolve([{ name: "Product1" }]), 2000);
+    setTimeout(() => resolve([{ id, name: `Product${counter}` }]), 2000);
   });
 }
 
 export default function useProduct() {
-  const loading = ref(false);
-  const products = ref([] as Array<any>);
+  const loading = ref<boolean>(false);
+  const products = ref<Array<Product>>([]);
 
-  async function search(params: any) {
+  async function search({ id }: Partial<Product>) {
     loading.value = true;
-    products.value = await fetchProduct(params);
+    products.value = await fetchProduct(id + "");
     loading.value = false;
   }
 

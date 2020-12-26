@@ -1,19 +1,27 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
+  <hr />
   <HelloWorld msg="Hello Vue 3.0 + Vite right" />
+  <hr />
   <Products />
-  <SomeComponent />
-  <OtherComponent />
+  <hr />
+  <ItemsInCartComponent />
+  <hr />
+  <AddToCartComponent />
+  <hr />
   <AnotherComponent />
+  <hr />
   <RxjsComponent />
+  <hr />
   <NewRxjsComponent />
+  <hr />
 </template>
 
 <script lang="ts">
 import HelloWorld from "./components/HelloWorld.vue";
 import Products from "./components/Products.vue";
-import OtherComponent from "./components/OtherComponent.vue";
-import SomeComponent from "./components/SomeComponent.vue";
+import AddToCartComponent from "./components/AddToCartComponent.vue";
+import ItemsInCartComponent from "./components/ItemsInCartComponent.vue";
 import AnotherComponent from "./components/AnotherComponent.vue";
 import RxjsComponent from "./components/RxjsComponent.vue";
 import NewRxjsComponent from "./components/NewRxjsComponent.vue";
@@ -23,8 +31,8 @@ export default {
   components: {
     HelloWorld,
     Products,
-    OtherComponent,
-    SomeComponent,
+    AddToCartComponent,
+    ItemsInCartComponent,
     AnotherComponent,
     RxjsComponent,
     NewRxjsComponent,

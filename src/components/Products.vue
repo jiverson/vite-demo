@@ -1,7 +1,9 @@
 <template>
   <div>
     <span v-if="loading">Loading product</span>
-    <span v-else>Loaded {{ product.name }}</span>
+    <span v-else
+      >Loaded <strong>{{ product.name }}</strong></span
+    >
   </div>
 </template>
 

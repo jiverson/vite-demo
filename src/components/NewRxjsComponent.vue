@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <button @click="inc">count is: {{ count }}</button>
-    <button ref="button">stop</button>
-  </div>
+  <button type="button" @click="inc">count is: {{ count }}</button>
+  <button type="button" ref="button">stop</button>
 </template>
 
 <script lang="ts">
